@@ -41,8 +41,8 @@ def main():
     cast.add_objects("players", player)
     
     for i in range(DEFAULT_ARTIFACTS):
-        x = random.randint(1, COLS - 1)
-        y = random.randint(0,4)
+        x = random.randint(0, COLS)
+        y = random.randint(0,3)
         position = Point(x, y)
         position = position.scale(CELL_SIZE)
         r = random.randint(0, 255)
