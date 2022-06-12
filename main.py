@@ -53,11 +53,11 @@ def main():
         if (random_number % 2) == 0:  
             object = Rock()  
             object.set_character('o')
-            group = 'rocks'
+            group = 'movingObjects'
         else:
             object = Gem()  
             object.set_character('*')
-            group = 'gems'
+            group = 'movingObjects'
         object.set_font_size(FONT_SIZE)
         object.set_color(color)
         object.set_position(position)

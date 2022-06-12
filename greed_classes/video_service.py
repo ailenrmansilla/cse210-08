@@ -1,6 +1,5 @@
 import pyray
 
-  # add again the banner to show score
   
 class VideoService:
     """Outputs the game state. The responsibility of the class of objects is to draw the game state 

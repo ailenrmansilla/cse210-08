@@ -132,17 +132,17 @@ class MovingObject:
         Args:
             max_y (int): The maximum y value.
         """
+        print('moving') # to check if it is getting to this point
         x = self._position.get_x()
         dy = self._position.get_y()
 
-        y = (dy + self._velocity.get_y())% max_y
+        y = (dy + self._velocity.get_y()) % max_y
 
-        if y <= max_y:
-            self._position = Point(x, y)
-            self._velocity = self._position.scale(15)
-        elif y == max_y:
-            self._position = Point(x, 0)
-            self._velocity = self._position.scale(15)
+        if y > max_y:
+            y = 0
+        self._position = Point(x, y)
+        self._velocity = self._position.scale(15)
+
 
 
     

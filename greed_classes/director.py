@@ -52,7 +52,6 @@ class Director:
         fallingObjects = cast.get_objects("movingObjects") # gems and rocks 
         max_x = self._video_service.get_width()
         max_y = self._video_service.get_height()
-        # definir a dodne poner esta funcion self._video_service.move_objects(fallingObjects)
         player.move_next(max_x, max_y)
 
         for object in fallingObjects:
@@ -71,6 +70,6 @@ class Director:
             cast (Cast): The cast of all objects.
         """
         self._video_service.clear_buffer()
-        actors = cast.get_all_objects()
-        self._video_service.draw_movingObjects(actors)
+        objects = cast.get_all_objects()
+        self._video_service.draw_movingObjects(objects)
         self._video_service.flush_buffer()
