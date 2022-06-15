@@ -58,7 +58,7 @@ def main():
             object = Gem()  
             object.set_character('*')
             group = 'movingObjects'
-        velocity = Point(0,-1)
+        velocity = Point(0,random.randint(3,20))
         object.set_velocity(velocity)
         object.set_font_size(FONT_SIZE)
         object.set_color(color)
