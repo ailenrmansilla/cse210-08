@@ -57,10 +57,9 @@ class Director:
         for object in fallingObjects:
             object.move_object(max_y)
             if player.get_position().equals(object.get_position()): 
-                print('touched') # to check if it gest to this point and the player touches the object
                 player.add_point(object.get_value()) # add a point (negative or positive point, rock or gem value) to the player's score
                 self._video_service.print_score(player) #call the video service and print the score on top
-                cast.remove('movingObjects',object)#remove the touched element
+                cast.remove_object('movingObjects',object)#remove the touched element
                 
                    
         
