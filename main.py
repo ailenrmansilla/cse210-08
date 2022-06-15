@@ -42,7 +42,7 @@ def main():
     
     for i in range(DEFAULT_ARTIFACTS):
         x = random.randint(0, COLS)
-        y = random.randint(0,3)
+        y = MAX_Y
         position = Point(x, y)
         position = position.scale(CELL_SIZE)
         r = random.randint(0, 255)
@@ -58,6 +58,8 @@ def main():
             object = Gem()  
             object.set_character('*')
             group = 'movingObjects'
+        velocity = Point(0,-1)
+        object.set_velocity(velocity)
         object.set_font_size(FONT_SIZE)
         object.set_color(color)
         object.set_position(position)
