@@ -17,9 +17,20 @@ class Player(MovingObject):
             _score: the total points.
             """
         super().__init__()
-        self._score = 0  
-    
+        self._score = 0 
+
+    def set_score(self,score):
+        """Sets the player's score.
+        Args:
+            Score(int): The player's initial score.
+        """
+        self._score = score
     def get_score(self):
+        """Gets the player's score as a integer.
+        
+        Returns:
+            _score: The player's score as a integer.
+        """
         return self._score
     
     def add_point(self, point):

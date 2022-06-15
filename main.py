@@ -38,6 +38,7 @@ def main():
     player.set_color(WHITE)
     position = Point((MAX_X//2),(MAX_Y-20))
     player.set_position(position)
+    player.set_score(0)
     cast.add_objects("players", player)
     
     for i in range(DEFAULT_ARTIFACTS):

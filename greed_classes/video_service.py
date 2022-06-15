@@ -43,8 +43,6 @@ class VideoService:
         y = movingObject.get_position().get_y()
         font_size = movingObject.get_font_size()
         color = movingObject.get_color().to_tuple()
-        if character == '#':
-            self.print_score(movingObject)
         pyray.draw_text(character, x, y, font_size, color)
         
     def draw_movingObjects(self, actors):
@@ -110,7 +108,8 @@ class VideoService:
 
     def print_score(self, player):
         """Prints the Player's current score"""
-        pyray.draw_text(player.get_score(), self._width//2, self._height//10, player.get_font_size(), player.get_color().to_tuple())
+        score = f'Score: {player.get_score()}'
+        pyray.draw_text(score, self._width//2, self._height//10, player.get_font_size(), player.get_color().to_tuple())
 
     # JUST IN CASE WE WANT TO FINISH THE GAME WHEN SCORE == 0
     # def game_over(self):

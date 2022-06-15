@@ -21,7 +21,7 @@ class MovingObject:
         self (MovingObject): An instance of MovingObject.
         """
         self._character = ''
-        self._font_size = 15
+        self._font_size = ''
         self._color = Color(265,265,265)
         self._position = Point(0,0)
         self._velocity = Point(0, 0)

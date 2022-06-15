@@ -55,10 +55,10 @@ class Director:
         player.move_next(max_x, max_y)
 
         for object in fallingObjects:
+            self._video_service.print_score(player) #call the video service and print the score on top
             object.move_object(max_y)
             if player.get_position().equals(object.get_position()): 
                 player.add_point(object.get_value()) # add a point (negative or positive point, rock or gem value) to the player's score
-                self._video_service.print_score(player) #call the video service and print the score on top
                 cast.remove_object('movingObjects',object)#remove the touched element
                 
                    
